@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: example-pkg-sushil.bhattacarjee
+Version: 1.1.0
+Summary: A simple API and Router Class
+Home-page: https://github.com/DataKnox/CodeSamples/tree/master/Python/AppDev
+Author: Sushil Bhattacharjee
+Author-email: sushil.bhattacharjee@outlook.com
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Example Package
+
+This is a simple example package. You can use
+[GitHub-flavored Markdown](https://guides.github.com/features/mastering-markdown/)
+to write your content.

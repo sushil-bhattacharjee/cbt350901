@@ -1,0 +1,20 @@
+#Show both running and stopped containers (-a, --all)
+#The docker ps command only shows running containers by default. To see all containers, use the --all (or -a) flag:
+docker ps -a
+
+#How to run a installed docker
+docker run -d -p 8081:8080 plantuml/plantuml-server:tomcat
+**note: since localhost@port=8080 is already consumed (ss -tuln, sudo ss -tulnp); 
+	therefore, it requires to change the localhost port to 8081
+
+docker run: This is the base Docker command used to start a new container.
+
+-d: This flag runs the container in "detached" mode, meaning the container will run in the background and not block your terminal.
+
+-p 8081:8080: This maps the container's internal port 8080 to port 8080 on the host machine.
+
+    The format is host_port:container_port, so in this case, requests to http://localhost:8081 on your machine 
+    will be forwarded to port 8080 inside the Docker container where the PlantUML server is running.
+
+plantuml/plantuml-server:tomcat: This specifies the Docker image to use. In this case, it is the plantuml/plantuml-server image, 
+tagged with the tomcat version (meaning it's running on Tomcat).

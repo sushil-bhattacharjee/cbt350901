@@ -1,0 +1,30 @@
+@startuml
+actor ExtApp
+boundary Web
+control Auth
+participant Shop
+entity CreditCard
+participant Shipping
+collections CosmosDB
+database SQLDB
+
+ExtApp -> Web:HTTP POST /Auth
+Web -> Auth:Login()
+Auth --> Web:OK/Unauthorised
+Web --> ExtApp:HTTP 201/HTTP 401
+ExtApp -\ Web:HTTP POST/buy 
+Web -> Shop:HTTP POST /charge
+Shop ->o CreditCard:HTTP POST/trans
+CreditCard --/ Shop:HTTP 201
+Shop -> Shipping: HTTP POST/ship?productId=$prod
+Shipping --> Shop:  HTTP 201
+Shop -> CosmosDB: HTTP POST
+CosmosDB -> SQLDB:ETL
+Shop --> Web:OK
+Web --> ExtApp: HTTP 201 Created
+
+
+
+
+@enduml
+

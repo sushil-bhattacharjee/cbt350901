@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: example-pkg-sushil.bhattacarjee.au
+Version: 1.1.0
+Summary: A simple API and Router Class
+Home-page: https://github.com/DataKnox/CodeSamples/tree/master/Python/AppDev
+Author: Sushil Bhattacharjee
+Author-email: sushil.bhattacharjee@outlook.com.au
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+This is my test file for API package
+SUshil Bhattacharjee
